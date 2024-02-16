@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #9883e5, #26a1fd, #00b8f7,
+             #00c8d7, #00d2ac, #42cc80, #6ec34e, #95b703, #b19f08, #be8826, #be743d, #b3654f);
+             gap: 30px;
+        }
+        .btn{
+            height: 50px;
+            width: 200px;
+            border: 2px solid #fbc531;
+            border-radius: 10px 10px 10px 10px;
+            background: transparent;
+            cursor: pointer;
+            color: #fbc531;
+            position: relative;   
+        }
+        .layer{
+            background-color: #fbc531;
+            height: 100%;
+            width: 10%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 10px 10px;
+            z-index: -1;
+            transition: .5s;
+
+        }
+        .btn:hover .layer{
+            width: 100%;
+        }
+        .btn:hover{
+            border: none;
+            color: white;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">
+        <span class="layer"></span>
+        Click Me
+    </button>
+
+    <button class="btn">
+        <span class="layer"></span>
+        Click Me
+    </button>
+</body>
+</html>
